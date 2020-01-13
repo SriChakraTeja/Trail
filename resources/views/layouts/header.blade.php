@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://parsleyjs.org/src/parsley.css">
     <script src="https://kit.fontawesome.com/8c6cab4692.js" crossorigin="anonymous"></script>
     <title>Trail - @yield('title')</title>
 </head>
 <body>
     
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{{url('/home')}}">Trail</a>
-
-  <button type="button" class="ml-auto btn btn-outline-light btn-lg px-3" data-toggle="modal" data-target="#login">
-  <i class="fas fa-user"></i>  Login</button>
-
+  <a class="navbar-brand" href="{{url('/')}}">Trail</a>
+  <button type="button" class="ml-auto btn btn-outline-light btn-md px-3" data-toggle="modal" data-target="#login">
+  <i class="fas fa-user"></i>    Login</button>
   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -28,7 +27,7 @@
       </div>
       <div class="modal-body">
 
-<form>
+    <form>
          <div class="form-group">
             <input type="email" class="form-control" id="email" name = "email" placeholder = "Email">
         </div>
