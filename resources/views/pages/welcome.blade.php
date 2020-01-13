@@ -4,8 +4,8 @@
 
 @section('content')
 <div class = "container text-center mt-5">
-    <h1 class = "display-4">IELTS Web</h1>
-    <p class = "lead text-primary">We help you to evaluate yourself</p>
+    <h1 class = "display-4">IELTS <strong class = "monospace text-warning">Web</strong></h1>
+    <p class = "lead text-warning">We help you to evaluate yourself</p>
     <hr style = "width : 350px;">
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#register">

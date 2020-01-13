@@ -27,10 +27,14 @@
       <td>{{ $contact -> subject}}</td>
       <td>{{ $contact -> body}}</td>
       <td><a class = "btn btn-raised btn-primary btn-sm" href="{{ route('pages.edit',$contact->id) }}"><i class="fas fa-edit"></i></a> ||
-      <a class = "btn btn-sm btn-secondary btn-raised" href="{{ route('pages.update',$contact->id) }}"><i class="fas fa-trash" style = "color:red;"></i></a></td>
+      <a class = "btn btn-sm btn-secondary btn-raised" href="{{ route('pages.delete',$contact->id) }}"><i class="fas fa-trash" style = "color:red;"></i></a></td>
     </tr>
     @endforeach
   </tbody>
 </table>
+
+    {{ $contacts->links() }}
+
 </div>
+
 @endsection

@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/delete/{id}','PagesController@delete')->name('pages.delete');
+
 Route::post('/update/{id}','PagesController@update')->name('pages.update');
 
 Route::get('/edit/{id}','PagesController@edit')->name('pages.edit');

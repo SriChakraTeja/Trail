@@ -64,7 +64,7 @@ class PagesController extends Controller
 
     public function readContacts()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::paginate(5);
         return view('pages.contactslist',compact('contacts'));
     }
 
@@ -82,15 +82,21 @@ class PagesController extends Controller
             'subject' => 'required',
             'body' => 'required',
         ]);
-
-        $contact = Contact::find($id);
+        
+        $contact = Contact::where('id',$id)->update($contactData);
         if($contact)
         {
-            return redirect('/');
+            return redirect('/contactslist');
         }
         else
         {
             return "Error";
         }
+    }
+
+    public function delete($id)
+    {
+        $contact = Contact::find($id)->delete();
+        return redirect('/contactslist');
     }
 }
